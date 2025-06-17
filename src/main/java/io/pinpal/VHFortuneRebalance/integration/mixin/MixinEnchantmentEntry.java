@@ -1,7 +1,6 @@
 package io.pinpal.VHFortuneRebalance.integration.mixin;
 
 import iskallia.vault.util.EnchantmentEntry;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.enchantment.Enchantment;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
