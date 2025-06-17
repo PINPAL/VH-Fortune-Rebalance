@@ -10,6 +10,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.Objects;
+
 /**
  * Changes the {@link iskallia.vault.util.EnchantmentEntry} class used by the
  * Vault Enchanter.
@@ -32,14 +34,15 @@ public abstract class MixinEnchantmentEntry {
 	  remap = false
 	)
 	private void init$return(Enchantment enchantment, int level, CallbackInfo ci) {
-		ResourceLocation registryName = this.enchantment.getRegistryName();
-		if (registryName != null && registryName.toString().equals("minecraft:fortune")) {
+		String enchantmentName = Objects.toString(this.enchantment.getRegistryName(), "");
+
+		if (enchantmentName.equals("minecraft:fortune")) {
 			this.level = 5;
 		}
 	}
 
 	/**
-	 * Makes sure that Fortune level 5 is considered a valid enchantment.
+	 * Ensures that Fortune V is a valid enchantment.
 	 */
 	@Inject(
 	  method = "isValid()Z",
@@ -48,9 +51,9 @@ public abstract class MixinEnchantmentEntry {
 	  remap = false
 	)
 	private void isValid$return(CallbackInfoReturnable<Boolean> ci) {
-		ResourceLocation registryName = this.enchantment.getRegistryName();
-		if (registryName != null && registryName.toString().equals("minecraft:fortune")
-			  && this.level <= 5) {
+		String registryName = Objects.toString(this.enchantment.getRegistryName(), "");
+
+		if (registryName.equals("minecraft:fortune") && this.level <= 5) {
 			ci.setReturnValue(true);
 		}
 	}
