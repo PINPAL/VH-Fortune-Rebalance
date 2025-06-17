@@ -29,6 +29,6 @@ Remove Fortunate Expertise and add Fortune V to Vault Enchanter
 [[dependencies.vh_fortune_rebalance]]
     modId="the_vault"
     mandatory=true
-    versionRange="[1.18.2-3.15.2.3663]"
+    versionRange="[1.18.2-3.15,)"
     ordering="AFTER"
     side="BOTH"
