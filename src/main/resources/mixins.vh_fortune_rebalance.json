@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "require": 1,
+    "package": "io.pinpal.VHFortuneRebalance.integration.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "refmap": "mixins.vh_fortune_rebalance.refmap.json",
+    "mixins": [
+        "MixinEnchantmentEntry",
+        "MixinExpertisesGuiConfig",
+    ],
+    "client": [],
+    "server": [],
+    "minVersion": "0.8"
+}
