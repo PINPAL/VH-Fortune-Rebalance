@@ -1,4 +1,4 @@
-package io.pinpal.VHFortuneRebalance.integration.mixin;
+package io.pinpal.VHFortuneRebalance.mixin;
 
 import iskallia.vault.config.Config;
 import iskallia.vault.config.ExpertisesGUIConfig;

@@ -9,7 +9,6 @@ buildscript {
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
-        classpath "eu.davidea:grabver:2.0.2"
     }
 }
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -19,25 +18,10 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
-apply plugin: 'eu.davidea.grabver'
 
-versioning {
-    // Required (number)
-    major 3
-    minor 16
-    // Optional, force custom patch (number)
-    patch 0
-    // Optional (any string)
-    //preRelease "RC1"
-    // Optional, custom task name to trigger the increase of the version
-    //incrementOn "<task-name>"
-    // Optional, custom task name for which you want to save the versioning file
-    //saveOn "<task-name>"
-}
-
-version = "1.18.2-${versioning.name}.${versioning.build}"
+version = "1.0.0"
 group = 'io.pinpal.VHFortuneRebalance' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'vh_fortune-rebalance'
+archivesBaseName = 'VHFortuneRebalance'// This is the name of the jar file that will be generated, without version or classifier
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

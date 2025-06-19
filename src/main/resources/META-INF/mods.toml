@@ -4,7 +4,7 @@ license="GPL-3.0-or-later"
 
 [[mods]]
 modId="vh_fortune_rebalance"
-version="${file.jarVersion}"
+version="1.0.0"
 displayName="VH Fortune Rebalance"
 #logoFile="examplemod.png"
 authors="PINPAL"

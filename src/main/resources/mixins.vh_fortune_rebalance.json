@@ -1,12 +1,12 @@
 {
     "required": true,
     "require": 1,
-    "package": "io.pinpal.VHFortuneRebalance.integration.mixin",
+    "package": "io.pinpal.VHFortuneRebalance.mixin",
     "compatibilityLevel": "JAVA_17",
     "refmap": "mixins.vh_fortune_rebalance.refmap.json",
     "mixins": [
         "MixinEnchantmentEntry",
-        "MixinExpertisesGuiConfig",
+        "MixinExpertisesGuiConfig"
     ],
     "client": [],
     "server": [],

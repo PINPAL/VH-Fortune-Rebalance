@@ -1,4 +1,4 @@
-package io.pinpal.VHFortuneRebalance.integration.mixin;
+package io.pinpal.VHFortuneRebalance.mixin;
 
 import iskallia.vault.util.EnchantmentEntry;
 import net.minecraft.world.item.enchantment.Enchantment;
